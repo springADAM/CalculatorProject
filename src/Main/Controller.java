@@ -61,12 +61,7 @@ public class Controller {
         Screen.setText(chaine);
 
     }
-    public void Devide(){
-        chaine = chaine+ '/';
-        Screen.setText(Screen.getText()+'/');
-        operators.add('/');
-        CalculeOp();
-    }
+
 
     private void CalculeOp() {
         Counter++;
@@ -77,6 +72,13 @@ public class Controller {
             Calculate(op);
             operators.add(tmp);
         }
+    }
+    public void Devide(){
+        chaine = chaine+ '/';
+        Screen.setText(Screen.getText()+'/');
+        operators.add('/');
+        CalculeOp();
+
     }
 
     public void Multiply(){
@@ -116,10 +118,12 @@ public class Controller {
             for (Character operator : operators) {
                 switch (operator) {
                     case '/':
-
+                        if(Double.parseDouble(op[i + 1])==0){
+                            throw new ArithmeticException();
+                        }else{
                         tmp = Double.parseDouble(op[i]) / Double.parseDouble(op[i + 1]);
                         op[i + 1] = String.valueOf(tmp);
-                        i++;
+                        i++;}
                         break;
                     case '*':
                         tmp = Double.parseDouble(op[i]) * Double.parseDouble(op[i + 1]);
@@ -153,9 +157,9 @@ public class Controller {
     public void Clear(){
         Result.setText(null);
         Screen.setText("0");
-        Comma.setDisable(true);
         chaine = "";
         operators = new ArrayList<>();
+        Comma.setDisable(false);
     }
 
 

@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
@@ -20,10 +21,10 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="154.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label fx:id="Result" prefHeight="159.0" prefWidth="368.0" style="-fx-background-color: #30374aff;" text="0" textFill="WHITE">
+            <Label fx:id="Result" prefHeight="159.0" prefWidth="368.0" style="-fx-background-color: #30374aff;" textFill="WHITE">
                <padding>
                   <Insets left="10.0" />
                </padding>
@@ -31,7 +32,7 @@
                   <Font name="Symbola" size="41.0" />
                </font>
             </Label>
-            <Label fx:id="Screen" prefHeight="85.0" prefWidth="376.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="1">
+            <Label fx:id="Screen" prefHeight="85.0" prefWidth="376.0" style="-fx-background-color: #ffffff;" text="0" GridPane.rowIndex="1">
                <padding>
                   <Insets left="10.0" />
                </padding>
@@ -112,7 +113,7 @@
                <font>
                   <Font size="17.0" />
                </font></Button>
-            <Button fx:id="Comma" mnemonicParsing="false" onAction="#Comma" prefHeight="138.0" prefWidth="119.0" style="-fx-background-color: f4f5f9ff;" text="." GridPane.columnIndex="4" GridPane.rowIndex="6">
+            <Button  fx:id="Comma" mnemonicParsing="false" onAction="#Comma" prefHeight="138.0" prefWidth="119.0" style="-fx-background-color: f4f5f9ff;" text="." GridPane.columnIndex="4" GridPane.rowIndex="6">
                <font>
                   <Font size="17.0" />
                </font></Button>
@@ -142,30 +143,23 @@
             <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
          </children>
       </GridPane>
-      <Button fx:id="Devide" layoutX="262.0" layoutY="225.0" mnemonicParsing="false" onAction="#Devide" prefHeight="75.0" prefWidth="88.0" style="-fx-background-color: dcdfe6ff;" text="/">
-         <font>
-            <Font size="17.0" />
-         </font></Button>
-      <Button fx:id="Delete" layoutY="225.0" mnemonicParsing="false" onAction="#Delete" prefHeight="75.0" prefWidth="87.0" style="-fx-background-color: dcdfe6ff;">
-         <font>
-            <Font size="17.0" />
-         </font>
-         <graphic>
-            <ImageView fitHeight="50.0" fitWidth="50.0">
-               <image>
-                  <Image url="@../img/delete_red.png" />
-               </image>
-            </ImageView>
-         </graphic></Button>
-      <Button fx:id="About" layoutX="87.0" layoutY="225.0" mnemonicParsing="false" onAction="#About" prefHeight="75.0" prefWidth="177.0" style="-fx-background-color: dcdfe6ff;" text="About">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
-      <Separator layoutX="87.0" layoutY="225.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="6.0" />
-      <Separator layoutX="262.0" layoutY="225.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="6.0" />
-      <Separator layoutX="262.0" layoutY="299.0" prefHeight="3.0" prefWidth="88.0" />
-      <Separator layoutX="87.0" layoutY="299.0" prefHeight="3.0" prefWidth="177.0" />
-      <Separator layoutY="299.0" prefHeight="3.0" prefWidth="88.0" />
+      <Separator layoutY="299.0" prefHeight="3.0" prefWidth="350.0" />
+      <HBox layoutY="225.0" prefHeight="72.0" prefWidth="350.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#About" prefHeight="72.0" prefWidth="180.0" style="-fx-background-color: dcdfe6ff;" text="About" />
+            <Separator orientation="VERTICAL" prefHeight="72.0" prefWidth="0.0" style="-fx-background-color: dcdfe6ff;" />
+            <Button fx:id="Delete" mnemonicParsing="false" onAction="#Delete" prefHeight="76.0" prefWidth="88.0" style="-fx-background-color: dcdfe6ff;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@../img/delete_red.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Separator orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: dcdfe6ff;" />
+            <Button fx:id="Devide" layoutX="186.0" layoutY="10.0" mnemonicParsing="false" onAction="#Devide" prefHeight="76.0" prefWidth="88.0" style="-fx-background-color: dcdfe6ff;" text="/" />
+         </children>
+      </HBox>
    </children>
 </AnchorPane>
