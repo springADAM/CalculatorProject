@@ -185,7 +185,7 @@ public class Controller {
         Screen.setText(chaine);
     }
     public void About(){
-        JOptionPane.showMessageDialog(null,"Made with love n java by BendabizAdam","About",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Made with love n java by Benyamina Mohammed","About",JOptionPane.INFORMATION_MESSAGE);
     }
 
 }
