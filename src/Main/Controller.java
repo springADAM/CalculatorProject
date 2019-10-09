@@ -32,6 +32,7 @@ public class Controller {
         chaine = chaine+ 3;
         Screen.setText(chaine);
     }
+    // One Two Three viva l'algerie
     public void Four(){
         chaine = chaine+4;
         Screen.setText(chaine);
